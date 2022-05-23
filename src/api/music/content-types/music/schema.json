@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "musics",
+  "info": {
+    "singularName": "music",
+    "pluralName": "musics",
+    "displayName": "Music"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Path": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    },
+    "Number": {
+      "type": "integer"
+    },
+    "artist": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::artist.artist",
+      "inversedBy": "music"
+    }
+  }
+}

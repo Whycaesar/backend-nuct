@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artistss",
+  "info": {
+    "singularName": "artist",
+    "pluralName": "artistss",
+    "displayName": "Artist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Path": {
+      "type": "string"
+    },
+    "music": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::music.music",
+      "mappedBy": "artist"
+    }
+  }
+}
