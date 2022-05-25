@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "artistss",
+  "collectionName": "artists",
   "info": {
     "singularName": "artist",
-    "pluralName": "artistss",
-    "displayName": "Artist",
+    "pluralName": "artists",
+    "displayName": "Artists",
     "description": ""
   },
   "options": {
@@ -18,11 +18,11 @@
     "Path": {
       "type": "string"
     },
-    "music": {
+    "nucts": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::music.music",
-      "mappedBy": "artist"
+      "relation": "manyToMany",
+      "target": "api::nuct.nuct",
+      "inversedBy": "artists"
     }
   }
 }

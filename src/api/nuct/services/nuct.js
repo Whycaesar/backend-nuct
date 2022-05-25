@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * music service.
+ * nuct service.
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::music.music');
+module.exports = createCoreService('api::nuct.nuct');

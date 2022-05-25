@@ -1,10 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "musics",
+  "collectionName": "nucts",
   "info": {
-    "singularName": "music",
-    "pluralName": "musics",
-    "displayName": "Music"
+    "singularName": "nuct",
+    "pluralName": "nucts",
+    "displayName": "Nucts",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,23 +15,23 @@
     "Title": {
       "type": "string"
     },
-    "Description": {
+    "Content": {
       "type": "richtext"
-    },
-    "Path": {
-      "type": "string"
     },
     "Link": {
       "type": "string"
     },
-    "Number": {
+    "Path": {
+      "type": "string"
+    },
+    "NumberHome": {
       "type": "integer"
     },
-    "artist": {
+    "artists": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::artist.artist",
-      "inversedBy": "music"
+      "mappedBy": "nucts"
     }
   }
 }
