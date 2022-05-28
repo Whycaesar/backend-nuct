@@ -7,8 +7,8 @@ module.exports = {
         },
         {
             method: 'GET',
-            path: '/nucts/:Path',
-            handler: 'custom-route-nuct.findOne',
+            path: '/nucts/:Slug',
+            handler: 'nuct-path.findOne',
             config: {
                 auth: false,
             }
