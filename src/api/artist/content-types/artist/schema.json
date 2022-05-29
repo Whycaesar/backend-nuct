@@ -23,9 +23,6 @@
       "relation": "manyToMany",
       "target": "api::nuct.nuct",
       "inversedBy": "artists"
-    },
-    "Slug": {
-      "type": "uid"
     }
   }
 }
