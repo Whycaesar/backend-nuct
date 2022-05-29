@@ -7,7 +7,7 @@ module.exports = {
         },
         {
             method: 'GET',
-            path: '/artist/page/:Path',
+            path: '/artist/:Path',
             handler: 'artist-path.findOne',
             config: {
                 auth: false,

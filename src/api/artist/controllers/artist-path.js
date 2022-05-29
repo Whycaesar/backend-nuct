@@ -8,10 +8,11 @@ const { createCoreController } = require('@strapi/strapi').factories;
 
 module.exports = createCoreController('api::artist.artist', ({strapi}) => ({
     async findOne(ctx) {
+        
         const { Path } = ctx.params;
 
         const entity = await strapi.db.query('api::artist.artist').findOne({
-            where: { Path }
+            where: { Path },
         });
 
         const sanitizedEntity = await this.sanitizeOutput(entity);
